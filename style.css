@@ -1,0 +1,159 @@
+/* --- Global Settings --- */
+body {
+    font-family: 'Sarabun', sans-serif;
+    /* พื้นหลัง Gradient เหมือนหน้า Login */
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* --- Navbar (แถบด้านบน) --- */
+.navbar {
+    background: rgba(255, 255, 255, 0.95); /* สีขาวโปร่งแสงนิดๆ */
+    padding: 15px 40px; /* ระยะห่างจากขอบ */
+    display: flex;
+    justify-content: space-between; /* ดันข้อความไปซ้าย ปุ่มไปขวา */
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); /* เงาบางๆ ด้านล่าง */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.user-greeting {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+/* ปุ่ม Logout ทรงวงรี (Pill Shape) */
+.btn-logout {
+    background: #ff6b6b;
+    color: white !important; /* บังคับตัวอักษรสีขาว */
+    padding: 10px 30px;      /* ความอ้วนของปุ่ม */
+    border-radius: 50px;     /* ทำให้อมนเป็นวงรี */
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.4); /* เงาสีแดงจางๆ */
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: #ff5252;
+    transform: translateY(-2px); /* ลอยขึ้นนิดนึง */
+    box-shadow: 0 6px 15px rgba(255, 107, 107, 0.6);
+}
+
+/* --- Content Container (กล่องเนื้อหาหลัก) --- */
+.container {
+    max-width: 800px;
+    margin: 40px auto; /* จัดกึ่งกลางหน้าจอ */
+    padding: 0 20px;
+}
+
+/* --- Card Design (ใช้ร่วมกันทั้งหน้า Login, Write, Index) --- */
+.card-box {
+    background: #ffffff;
+    border-radius: 20px;    /* มุมโค้งมนสวยๆ */
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* เงาฟุ้งลอยเด่น */
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out; /* เอฟเฟกต์ค่อยๆ ปรากฏ */
+}
+
+/* สไตล์เฉพาะสำหรับหน้า Login/Register ให้จัดกลางจอ */
+body.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* --- Form Elements (Input, Button) --- */
+input[type="text"], input[type="password"], textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: 0.3s;
+    background-color: #f8f9fa;
+}
+
+input:focus, textarea:focus {
+    border-color: #ACB6E5;
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(172, 182, 229, 0.4);
+}
+
+/* ปุ่มกดทั่วไป */
+.btn-primary, button[type="submit"] {
+    background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+}
+
+.btn-primary:hover, button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(76, 175, 80, 0.4);
+}
+
+/* ปุ่มเพิ่มรายการ (สีฟ้า) */
+.btn-add-list {
+    background: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* List Item Styles */
+.list-item { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+.btn-del-item { background: #ff4d4d; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer; display: flex; justify-content: center; align-items: center;}
+
+/* Card Header ใน Index */
+.entry-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f0f0f0; padding-bottom: 10px; margin-bottom: 15px; }
+.entry-title { font-size: 1.5rem; color: #333; margin: 0; }
+.entry-date { color: #888; font-size: 0.9rem; }
+.checklist {
+    list-style-type: disc; /* สั่งให้แสดงจุดกลมทึบ */
+    padding-left: 25px;    /* เว้นระยะซ้ายเพื่อให้มีที่วางจุด */
+    margin: 10px 0;
+}
+
+.checklist li {
+    margin-bottom: 8px;    /* เว้นระยะบรรทัด */
+    color: #444;           /* สีตัวอักษร */
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.checklist input[type="checkbox"] { margin-right: 10px; transform: scale(1.2); }
+
+/* ปุ่ม Action (แก้ไข/ลบ) */
+.action-btn-group { margin-top: 20px; text-align: right; }
+.btn-edit { color: #ff9800; text-decoration: none; margin-right: 15px; font-weight: bold; }
+.btn-delete { color: #ff4d4d; text-decoration: none; font-weight: bold; }
+
+/* Animation */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
