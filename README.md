@@ -21,3 +21,8 @@ Project By น.ส.ปัทมวรรณ โยชนะ 013 & นายณ�
   2.4.	การออกจากระบบ (Logout):<br>
       o	ระบบจะทำลาย Session ของผู้ใช้งาน และพากลับไปยังหน้า Login<br>
 
+3. Data Flow Diagram (DFD)<br>
+<img width="3346" height="2947" alt="Membership System JSON-2026-02-06-020208" src="https://github.com/user-attachments/assets/f0333538-a121-4fbc-bf25-c4273bd9f1d4" />
+<br>
+4. Entity-Relationship Diagram (ER Diagram)<br>
+<img width="2026" height="2572" alt="Membership System JSON-2026-02-06-020400" src="https://github.com/user-attachments/assets/746c85f1-2671-42e8-8eac-d62836e75cd7" />
